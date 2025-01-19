@@ -1,4 +1,5 @@
 
+import { ArrowDownCircle } from 'lucide-react'
 import HeroText from './HeroText'
 import Navbar from './Navbar'
 import Pricing from './Pricing'
