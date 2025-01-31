@@ -3,6 +3,9 @@ import ArtistPage from '@/components/ArtistPage/ArtistPage'
 import prisma from '@/db'
 // import prisma from '@/db'
 import React from 'react'
+type PageProps = {
+  artist: string;
+}
 
 interface artist {
   name: string
@@ -14,7 +17,7 @@ interface link{
   link: string
 }
 
- const page = async({params}:{params:{artist:string}}) => {
+ const page = async({params}:{params:Promise<any>}) => {
   const {artist} = await params;
 
     
