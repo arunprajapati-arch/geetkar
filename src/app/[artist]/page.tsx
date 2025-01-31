@@ -18,24 +18,25 @@ interface link{
   const {artist} = await params;
 
     
-  const artistDetails = {
-    id: 'asdf',
-    username: 'arun',
-    name: 'Arun',
-    password: 'as',
-    profileImage: null,
-    provider: 'Credentials',
-    links: [
-      { id: 'as', platform: 'YouTube', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
-      { id: 'as', platform: 'Spotify', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
-      { id: 'as', platform: 'Apple_Music', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
+  const artistDetails = await prisma.artist.findUnique({
+    where:{username:artist},
+    include: {links:true}
+  })
+  // {
+  //   id: 'asdf',
+  //   username: 'arun',
+  //   name: 'Arun',
+  //   password: 'as',
+  //   profileImage: null,
+  //   provider: 'Credentials',
+  //   links: [
+  //     { id: 'as', platform: 'YouTube', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
+  //     { id: 'as', platform: 'Spotify', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
+  //     { id: 'as', platform: 'Apple_Music', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
 
-    ]
-  }
-  // = await prisma.artist.findUnique({
-  //   where:{username:artist},
-  //   include: {links:true}
-  // })
+  //   ]
+  // }
+  // 
     
   console.log(artistDetails);
   

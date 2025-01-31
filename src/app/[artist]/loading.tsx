@@ -1,10 +1,11 @@
 import React from 'react'
+import { Skeleton } from "@/components/ui/skeleton"
 
-type Props = {}
 
-const loading = (props: Props) => {
+const loading = () => {
   return (
-    <div>loading</div>
+    <Skeleton className="m-12 w-[100px] h-[20px] rounded-full" />
+
   )
 }
 

@@ -20,15 +20,15 @@ type Artist = {
   username: string;
   password: string | null;
   profileImage: string | null;
-  provider: string;  // Assuming Provider is an enum
+  provider: $Enums.Provider;  // Assuming Provider is an enum
   links: Link[];  // Array of links
 };
 
 type Link = {
   link: string;
   id: string;
-  platform: string;  // Assuming Platform is an enum
-  artistId: string 
+  platform: $Enums.Platform;  // Assuming Platform is an enum
+  artistId: string | null
 };
 
 type ArtistDetails = Artist | null;
@@ -36,11 +36,11 @@ type ArtistDetails = Artist | null;
 
 const ArtistPage = ({artistDetails}: {artistDetails: ArtistDetails}) => {
  
-    console.log(artistDetails+"in artst page");
+   
     if (!artistDetails)return
     
   return (
-    <div className='w-full  overflow-y-auto relative  bg-black flex  justify-center '>
+    <div className='w-full  overflow-y-hidden relative  bg-black flex  justify-center '>
       {/* <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
