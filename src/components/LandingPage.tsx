@@ -12,10 +12,10 @@ type Props = {}
 
 const LandingPage = (props: Props) => {
   return (
-    <div className='bg-black w-full relative' >
+    <div className='bg-black w-full  relative' >
         {/* <Meteors className=' ' number={20} /> */}
       
-        <div className='px-4 overflow-x-hidden relative'>
+        <div className='px-4 h-screen overflow-x-hidden flex flex-col max-md:gap-28 relative'>
         <SparklesCore
                   id="tsparticlesfullpage"
                   background="transparent"
@@ -28,7 +28,7 @@ const LandingPage = (props: Props) => {
         <Navbar/>
         <HeroText/>
         </div>
-        <Pricing/>
+        {/* <Pricing/> */}
         {/* <div className='w-full h-screen bg-black '>
         
         </div> */}

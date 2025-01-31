@@ -12,7 +12,7 @@ const HeroText = () => {
   
 
   return (
-    <div className=' w-full  md:h-[89vh] relative  flex items-center justify-between '>
+    <div className=' w-full  md:h-[89vh] relative  flex items-center  justify-between '>
        {/* <SparklesCore
                   id="tsparticlesfullpage"
                   background="transparent"
