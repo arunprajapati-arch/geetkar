@@ -7,11 +7,11 @@ type Props = {}
 
 const Pricing = (props: Props) => {
   return (
-    <div className=' w-full min-h-96 max-md:mt-4 pb-4  text-black bg-yellow-500/90 rounded-t-3xl'>
+    <div className=' w-full min-h-96 max-md:mt-4 pb-4  text-black bg-yellow-500/90 rounded-3xl'>
        
         <div className=' flex flex-col  justify-center items-center gap-16'>
         <div className='flex flex-col items-center justify-center gap-4 mt-4'>
-        <h1 className='text-black  text-2xl md:text-7xl  max-md:tracking-tight font-serif font-bold '>Choose Your <span className='text-white'> Subscription Plan</span></h1>
+        <h1 className='text-black  text-2xl md:text-7xl  max-md:tracking-tight font-serif font-bold '>Explore our <span className='text-white'> Subscription Plans</span></h1>
         <h2 className='text-white md:text-2xl'>No contract or credit card required</h2>
         <div className="hidden">
             {"Monthly/yearly"}

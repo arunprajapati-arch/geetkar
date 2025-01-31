@@ -1,4 +1,4 @@
-"use client"
+
 import { $Enums } from '@prisma/client';
 import ytLogo from '@/assets/youtube(6).png'
 import spotiLogo from '@/assets/spotify(3).png'
@@ -7,10 +7,12 @@ import verifyLogo from '@/assets/verified.png'
 import React from 'react'
 import UserImage from './UserImage';
 import { YoutubeIcon } from 'lucide-react';
-import LatestRelease from './LatestRelease';
+import FeaturedRelease from './FeaturedRelease';
 import Image from 'next/image';
 import { SparklesCore } from "../ui/sparkles";
 import { Spotlight } from '../ui/spotlight';
+import SocialIcons from './SocialIcons';
+import SocialLinkBars from '../SocialLinkBars';
 
 type Artist = {
   name: string;
@@ -22,12 +24,11 @@ type Artist = {
   links: Link[];  // Array of links
 };
 
-// $Enums.Platform
 type Link = {
   link: string;
   id: string;
   platform: string;  // Assuming Platform is an enum
-  artistId: string | null;
+  artistId: string 
 };
 
 type ArtistDetails = Artist | null;
@@ -36,11 +37,11 @@ type ArtistDetails = Artist | null;
 const ArtistPage = ({artistDetails}: {artistDetails: ArtistDetails}) => {
  
     console.log(artistDetails+"in artst page");
+    if (!artistDetails)return
     
   return (
-    <div className='w-full relative   flex  justify-center '>
+    <div className='w-full  overflow-y-auto relative  bg-black flex  justify-center '>
       {/* <SparklesCore
-
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
@@ -50,10 +51,10 @@ const ArtistPage = ({artistDetails}: {artistDetails: ArtistDetails}) => {
           particleColor="#FFFFFF"
         /> */}
          <Spotlight
-        className="-top-40 left-0 md:left-80 md:-top-72"
+        className="-top-40 left-0 md:left-96 md:-top-72"
         fill="white"
       />
-    <div className=' h-screen w-full md:w-2/5   p-4 flex flex-col items-center    gap-8  '>
+    <div className='h-screen md:min-h-screen w-full md:w-2/5   p-4 flex flex-col items-center gap-8  '>
       <div className='flex flex-col items-center justify-center gap-4'>
         <UserImage url={artistDetails?.profileImage}/>
         <div className='flex flex-col items-center'>
@@ -62,21 +63,24 @@ const ArtistPage = ({artistDetails}: {artistDetails: ArtistDetails}) => {
        </div>
       </div>
        <div className='flex items-center justify-center gap-8  '>
-        <span className='flex flex-col items-center justify-center gap-2 '><Image className='' src={ytLogo}alt='e'height={1}width={40}/><span className='text-xs text-gray-400 '>1 M</span></span>
-        <span className='flex flex-col items-center justify-center gap-2'><Image src={spotiLogo}alt='e'height={40}width={40}/><span className='text-xs text-gray-400 ' >2 M</span></span>
-        <span className='flex flex-col items-center justify-center gap-2'><Image src={appleLogo}alt='e'height={40}width={40}/><span className='text-xs text-gray-400'>100k</span></span>
-        
+      {artistDetails.links && 
+      artistDetails.links.map((link, idx) => (
+        <div key={idx}>
+          <SocialIcons  platform = {link.platform} link={link.link} />
+        </div>
+      ))}
+      
        </div>
-       <LatestRelease/>
+       <div className=''>
+       {/* <FeaturedRelease/> */}
+       </div>
        <div className='flex flex-col  justify-center w-full px-10 gap-4'>
-       <div className='bg-black border border-green-500  text-white p-4 font-bold rounded-full flex items-center justify-between px-6  '>
-        Listen on Spotify
-        <Image src={spotiLogo}alt='e'height={30}width={30}/>
-       </div>
-       <div className='border border-red-500 text-white p-4   font-bold rounded-full flex items-center justify-between px-6 '>
-        Watch on Youtube
-        <Image src={ytLogo}alt='e'height={30}width={30}/>
-       </div>
+       {artistDetails.links && 
+      artistDetails.links.map((link, idx) => (
+        <div key={idx}>
+          <SocialLinkBars  platform = {link.platform} link={link.link} />
+        </div>
+      ))}
        </div>
     </div>
     </div>

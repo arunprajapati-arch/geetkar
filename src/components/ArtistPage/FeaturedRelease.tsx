@@ -3,13 +3,13 @@ import React from 'react'
 
 type Props = {}
 
-const LatestRelease = (props: Props) => {
+const FeaturedRelease = (props: Props) => {
   return (
-    <div className='relative w-full max-md:h-[28%] h-2/3 rounded-xl overflow-hidden'>
+    <div className='relative w-[20rem] md:w-[36rem] max-md:h-52 h-72 rounded-xl overflow-hidden'>
         <Image
         className=''
         src={'https://images.unsplash.com/photo-1735527919007-3ba8d909049e'}
-        alt='d'
+        alt='alt'
         
         fill
         />
@@ -17,4 +17,4 @@ const LatestRelease = (props: Props) => {
   )
 }
 
-export default LatestRelease
+export default FeaturedRelease

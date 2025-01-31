@@ -26,7 +26,10 @@ interface link{
     profileImage: null,
     provider: 'Credentials',
     links: [
-      { id: 'as', platform: 'YouTube', link: 'sdfdf', artistId: 'asdf' }
+      { id: 'as', platform: 'YouTube', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
+      { id: 'as', platform: 'Spotify', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
+      { id: 'as', platform: 'Apple_Music', link: 'https://www.youtube.com/@SonySAB', artistId: 'asdf' },
+
     ]
   }
   // = await prisma.artist.findUnique({
