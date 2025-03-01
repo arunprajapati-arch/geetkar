@@ -20,12 +20,18 @@ importers:
 
   apps/main:
     dependencies:
+      '@fontsource/bruno-ace-sc':
+        specifier: ^5.1.1
+        version: 5.1.1
       '@repo/db':
         specifier: workspace:*
         version: link:../../packages/db
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      lucide-react:
+        specifier: ^0.477.0
+        version: 0.477.0(react@18.3.1)
       next:
         specifier: 14.2.6
         version: 14.2.6(react-dom@18.3.1)(react@18.3.1)
@@ -758,6 +764,10 @@ packages:
       '@eslint/core': 0.12.0
       levn: 0.4.1
     dev: true
+
+  /@fontsource/bruno-ace-sc@5.1.1:
+    resolution: {integrity: sha512-Ao1qyrOpGiZEqB/QfFf8f6PZebjvlB8n8jsGABajRJkuky7GR1MA6o9gZUsLKzriOZyx9vMwb+9Ng49uZpkw3A==}
+    dev: false
 
   /@humanfs/core@0.19.1:
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4028,6 +4038,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-react@0.477.0(react@18.3.1):
+    resolution: {integrity: sha512-yCf7aYxerFZAbd8jHJxjwe1j7jEMPptjnaOqdYeirFnEy85cNR3/L+o0I875CYFYya+eEVzZSbNuRk8BZPDpVw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    dependencies:
+      react: 18.3.1
     dev: false
 
   /math-intrinsics@1.1.0:

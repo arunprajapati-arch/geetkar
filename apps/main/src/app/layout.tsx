@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import '@fontsource/bruno-ace-sc';
 import './globals.css'
 import '@repo/ui/styles.css'
 import Providers from '../providers'

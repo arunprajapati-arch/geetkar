@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bruno-ace-sc-font {
+    font-family: 'Bruno Ace SC', sans-serif;
+  }
