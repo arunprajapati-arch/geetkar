@@ -10,6 +10,9 @@ export const Hero = () => {
     <div className="min-h-screen relative w-full p-4 overflow-hidden bg-grey-800 flex flex-col items-center">
       <div className="absolute inset-0 w-full h-full bg-grey-800 z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       
+      {/* Bottom gradient that blends with black background */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-grey-900/90 to-transparent z-10 pointer-events-none" />
+      
       <Boxes />
       <Navbar />
       
@@ -20,7 +23,7 @@ export const Hero = () => {
             Elevate Your <span className="text-yellow-500">Musical Journey</span>
           </h1>
           <div className="text-base md:text-lg text-center md:text-left w-full md:w-5/6 text-neutral-300">
-            Geetkar is a premier music label dedicated to discovering, developing and promoting exceptional musical talent across genres.
+            Geetkar is a premier music label dedicated to discovering, developing and promoting  musical talent across genres.
             
             <div className="flex flex-wrap  max-md:justify-center gap-4 mt-6 font-bold">
               <Button className="bg-yellow-500 hover:bg-yellow-600 transition-colors">Discover Our Artists</Button>

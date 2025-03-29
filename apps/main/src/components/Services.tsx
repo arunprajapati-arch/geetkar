@@ -20,13 +20,11 @@ export const Services = () => {
     const services: ServicesData = {
         "Music Production": {
             icon: <Music className="w-6 h-6" />,
-            description: "State-of-the-art recording facilities and experienced producers to bring your musical vision to life.",
+            description: "Experienced producers to bring your musical vision to life.",
             features: [
-                "Professional recording studios",
                 "Expert mixing and mastering",
                 "Arrangement and composition",
                 "Vocal production and tuning",
-                "Custom instrumentals",
             ],
         },
         "Video Production": {
@@ -35,9 +33,7 @@ export const Services = () => {
             features: [
                 "Music video direction",
                 "Cinematography and editing",
-                "Storyboarding and scripting",
                 "Post-production effects",
-                "Custom animations",
             ],
         },
         "Artist Management": {
@@ -45,9 +41,7 @@ export const Services = () => {
             description: "Comprehensive artist management services to help you grow your career.",
             features: [
                 "Brand development",
-                "Tour planning and logistics",
                 "Social media strategy",
-                "Contract negotiation",
                 "Industry networking",
             ],
         },
@@ -79,7 +73,7 @@ export const Services = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-12"
+                    className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-12"
                 >
                     <div className="flex-1">
                         <h3 className="text-2xl md:text-3xl font-bold mb-4">{activeTab}</h3>
@@ -104,13 +98,20 @@ export const Services = () => {
                     </div>
                     <div className="w-full lg:flex-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden shadow-2xl">
                         <div className="aspect-video flex justify-center items-center relative">
-                            <div className="absolute inset-0 bg-black opacity-50"></div>
-                            <button 
+                            {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
+                            <iframe 
+                                className="absolute inset-0 w-full h-full"  
+                                src="https://www.youtube.com/embed/KBqVFLUtWGI" 
+                                width="100%" 
+                                height="100%" 
+                                allowFullScreen
+                            ></iframe>
+                            {/* <button 
                                 className="w-16 h-16 bg-yellow-500 hover:bg-yellow-400 rounded-full flex justify-center items-center z-10 transition-all duration-300 transform hover:scale-110 focus:outline-none" 
                                 aria-label="Play video"
                             >
                                 <span className="text-black text-2xl ml-1">▶</span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </motion.div>
