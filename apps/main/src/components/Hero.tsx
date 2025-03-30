@@ -4,10 +4,11 @@ import { Spotify } from "react-spotify-embed";
 import Navbar from "./Navbar";
 import { Boxes } from "./ui/background-boxes";
 import { ArrowDownCircle } from "lucide-react";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen relative w-full p-4 overflow-hidden bg-grey-800 flex flex-col items-center">
+    <div id="home" className="min-h-screen relative w-full p-4 overflow-hidden bg-grey-800 flex flex-col items-center">
       <div className="absolute inset-0 w-full h-full bg-grey-800 z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       
       {/* Bottom gradient that blends with black background */}
@@ -26,8 +27,10 @@ export const Hero = () => {
             Geetkar is a premier music label dedicated to discovering, developing and promoting  musical talent across genres.
             
             <div className="flex flex-wrap  max-md:justify-center gap-4 mt-6 font-bold">
-              <Button className="bg-yellow-500 hover:bg-yellow-600 transition-colors">Discover Our Artists</Button>
-              <Button >Listen Now</Button>
+              {/* <Button className="bg-yellow-500 hover:bg-yellow-600 transition-colors">Discover Our Artists</Button> */}
+              <Link href={"https://open.spotify.com/playlist/29AorDXdPyBJDDkzatUJTx?si=uWQ8ztfsRq2Sh5gzsRxmPw&pi=_nAl5eVqRquKy"} target="_blank">
+              <Button className="bg-yellow-500 hover:bg-yellow-600 transition-colors" >Listen Now</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -35,7 +38,7 @@ export const Hero = () => {
         
         <div className="w-full md:w-1/2 max-w-md mx-auto md:mx-0 mt-6 md:mt-0 z-20 mb-16 sm:mb-0 flex justify-center md:justify-start">
         {/* can use custom player later */}
-          <Spotify link="https://open.spotify.com/album/5H5qWXVkPtu1TXb7sLfckt?si=9nfsG1AWRqG73p8PCM4leQ" />
+          <Spotify  link="https://open.spotify.com/playlist/29AorDXdPyBJDDkzatUJTx?si=uWQ8ztfsRq2Sh5gzsRxmPw&pi=_nAl5eVqRquKy" />
         </div>
       </div>
       

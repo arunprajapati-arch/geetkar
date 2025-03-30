@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                     </div>
                     
                     <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
-                        <Link href="/about" className=" hover:text-yellow-400 text-sm md:text-base">
+                        {/* <Link href="/about" className=" hover:text-yellow-400 text-sm md:text-base">
                             About
                         </Link>
                         <Link href="/contact" className=" hover:text-yellow-400 text-sm md:text-base">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                         </Link>
                         <Link href="/terms" className=" hover:text-yellow-400 text-sm md:text-base">
                             Terms of Service
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

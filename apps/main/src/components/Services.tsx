@@ -22,9 +22,10 @@ export const Services = () => {
             icon: <Music className="w-6 h-6" />,
             description: "Experienced producers to bring your musical vision to life.",
             features: [
+                "Beats and drill production",
                 "Expert mixing and mastering",
                 "Arrangement and composition",
-                "Vocal production and tuning",
+               
             ],
         },
         "Video Production": {
@@ -92,9 +93,9 @@ export const Services = () => {
                                 </motion.li>
                             ))}
                         </ul>
-                        <button className="mt-8 px-6 py-3 bg-yellow-500 text-black rounded-full hover:bg-yellow-400 transition-colors shadow-lg font-medium">
+                        {/* <button className="mt-8 px-6 py-3 bg-yellow-500 text-black rounded-full hover:bg-yellow-400 transition-colors shadow-lg font-medium">
                             Learn More About {activeTab}
-                        </button>
+                        </button> */}
                     </div>
                     <div className="w-full lg:flex-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden shadow-2xl">
                         <div className="aspect-video flex justify-center items-center relative">

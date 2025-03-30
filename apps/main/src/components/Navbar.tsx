@@ -18,29 +18,29 @@ const Navbar: FC = () => {
                 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6">
-                    <li className="hover:text-gray-300">
-                        <Link href="/">Home</Link>
+                    <li className="hover:text-yellow-400">
+                        <Link href="#home">Home</Link>
                     </li>
-                    <li className="hover:text-gray-300">
+                    <li className="hover:text-yellow-400">
                         <Link href="#services">Services</Link>
                     </li>
-                    <li className="hover:text-gray-300">
+                    {/* <li className="hover:text-gray-300">
                         <Link href="/lessons">Artists</Link>
-                    </li>
-                    <li className="hover:text-gray-300">
-                        <Link href="/contact">Contact</Link>
+                    </li> */}
+                    <li className="hover:text-yellow-400">
+                        <Link href="#contact">Contact</Link>
                     </li>
                 </ul>
                 
                 {/* Login Button (Desktop) */}
-                <div className="hidden md:block">
-                    <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">
+                {/* <div >
+                    <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-lg text-black font-semibold">
                         Get Started
                     </button>
-                </div>
+                </div> */}
                 
                 {/* Mobile Menu Button */}
-                <button 
+                {/* <button 
                     className="md:hidden text-white focus:outline-none"
                     onClick={toggleMenu}
                 >
@@ -51,11 +51,11 @@ const Navbar: FC = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         )}
                     </svg>
-                </button>
+                </button> */}
             </div>
             
             {/* Mobile Menu */}
-            {isMenuOpen && (
+            {/* {isMenuOpen && (
                 <div className="md:hidden bg-black py-2">
                     <div className="container mx-auto px-4">
                         <ul className="space-y-2">
@@ -79,7 +79,7 @@ const Navbar: FC = () => {
                         </ul>
                     </div>
                 </div>
-            )}
+            )} */}
         </nav>
     );
 };
