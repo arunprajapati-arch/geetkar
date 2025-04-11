@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: geetkar_postgres_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=geetkar
+    ports:
+      - "5432:5432"
+    volumes:
+      - geetkar_postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  geetkar_postgres_data:
