@@ -121,8 +121,19 @@ exports.Prisma.ArtistScalarFieldEnum = {
   id: 'id',
   name: 'name',
   artistName: 'artistName',
+  image: 'image',
+  bio: 'bio',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
+};
+
+exports.Prisma.LinkScalarFieldEnum = {
+  id: 'id',
+  url: 'url',
+  platofrm: 'platofrm',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  artistId: 'artistId'
 };
 
 exports.Prisma.SortOrder = {
@@ -135,9 +146,20 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+exports.Platform = exports.$Enums.Platform = {
+  YOUTUBE: 'YOUTUBE',
+  SPOTIFY: 'SPOTIFY',
+  APPLE_MUSIC: 'APPLE_MUSIC',
+  OTHER: 'OTHER'
+};
 
 exports.Prisma.ModelName = {
-  Artist: 'Artist'
+  Artist: 'Artist',
+  Link: 'Link'
 };
 
 /**
