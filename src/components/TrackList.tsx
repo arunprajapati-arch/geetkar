@@ -1,11 +1,11 @@
 export default function TrackList() {
     return (
-        <div className="flex flex-col h-full border-2 border-border/40 rounded-2xl p-4 bg-card/50 backdrop-blur-sm shadow-lg">
-            <div className="flex items-center justify-between p-4 border-b border-border/40">
+        <div className="max-md:hidden flex flex-col h-full border-2 border-border/40 rounded-2xl p-4 bg-card/50 backdrop-blur-sm shadow-lg">
+            <div className=" flex items-center justify-between p-4 border-b border-border/40 ">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Track List</h1>
                 <div className="text-sm text-muted-foreground">10 tracks</div>
             </div>
-            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+            <div className="flex-1  overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
                 <div className="flex flex-col gap-2 p-4">
                     {/* Example track items - replace with actual data later */}
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((track) => (

@@ -11,11 +11,11 @@ export default function Appbar({ name, firstName, lastName, imageUrl }: AppbarPr
     return (
         <div className="flex flex-row justify-between items-center p-4 ">
             <div className="flex flex-row items-center gap-2">
-                <Avatar className="w-16 h-16">
+                <Avatar className="w-16 h-16 md:w-24 md:h-24">
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
-                <h1 className="text-2xl font-bold">@{name}</h1>
+                <h1 className="md:text-3xl font-bold">@{name}</h1>
             </div>
         </div>
     );
