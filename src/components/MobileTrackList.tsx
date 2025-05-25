@@ -1,10 +1,28 @@
-export default function TrackList() {
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+  } from "@/components/ui/drawer"
+  
+import TrackListButton from "./TrackListButton";
+import TrackList from "./TrackList";
+import { Button } from "./ui/button";
+  
+export default function MobileTrackList() {
     return (
-        <div className=" flex flex-col h-full border-2 border-border/40 rounded-2xl p-4 bg-card/50 backdrop-blur-sm shadow-lg">
-            <div className=" flex items-center justify-between p-4 border-b border-border/40 ">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Track List</h1>
-                <div className="text-sm text-muted-foreground">10 tracks</div>
-            </div>
+        <Drawer>
+        <DrawerTrigger asChild>
+            <TrackListButton />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>Track List</DrawerTitle>
+            </DrawerHeader>
             <div className="flex-1  overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
                 <div className="flex flex-col gap-2 p-4">
                     {/* Example track items - replace with actual data later */}
@@ -20,7 +38,7 @@ export default function TrackList() {
                                 <span className="font-medium group-hover:text-primary transition-colors">Track {track}</span>
                                 <span className="text-sm text-muted-foreground">Artist Name</span>
                             </div>
-                            <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="">
                                 <button className="p-2 rounded-full hover:bg-primary/10 text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -31,6 +49,8 @@ export default function TrackList() {
                     ))}
                 </div>
             </div>
-        </div>
+        </DrawerContent>
+      </Drawer>
+      
     );
 }
